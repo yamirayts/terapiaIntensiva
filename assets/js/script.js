@@ -267,6 +267,74 @@ function calculoSafi() {
 
 
 
+let botonPeso = document.getElementById("peso");
+botonPeso.addEventListener("click", datoPeso);
+
+function datoPeso(){
+    let dato = document.getElementById("datos");
+    let datoParticular = document.getElementById("datoParticular");
+    dato.removeChild(datoParticular);
+    let div = document.createElement("div");
+    div.setAttribute("id","datoParticular");
+    let Input = `
+    <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Altura (en cm):</span>
+    <input id="altPeso" type="number" class="form-control" placeholder="Ej.: 145" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+
+    <div name="sexo" class="form-check" >
+    <input id="mujer" class="form-check-input tipoSexo" type="radio" value="45.5"name="tipoSexo" id="flexRadioDefault1">
+    <label class="form-check-label" for="flexRadioDefault1">
+      Mujer
+    </label>
+    <br>
+    <input id="hombre" class="form-check-input tipoSexo" type="radio" value="50" name="tipoSexo" id="flexRadioDefault2" checked>
+    <label class="form-check-label" for="flexRadioDefault2">
+      Hombre
+    </label>
+    </div>
+
+    <div class="d-grid gap-2 col-6 mx-auto">
+
+    <button id="calcularPeso" class="btn btn-primary" type="button">Calcular</button>
+  
+    </div>
+
+    `;
+    div.innerHTML = Input;
+   
+    dato.appendChild(div);
+    let calcularPeso = document.getElementById("calcularPeso");
+    calcularPeso.addEventListener("click", calculoPeso);
+    
+}
+
+function calculoPeso() {
+    let altPeso = document.getElementById("altPeso").value;
+    let seleccion = document.getElementsByClassName("tipoSexo");
+        for (i=0;i<seleccion.length;i++){ 
+           if (seleccion[i].checked) 
+              break; 
+        } 
+        var valSexo = parseFloat(seleccion[i].value) ;
+    
+    if (valSexo==50){
+       var valInd = parseFloat(0.75);
+    }else{
+        var valInd = parseFloat(0.67);
+    }
+
+    let pesoCalc = ((altPeso-152.4) * valInd) + valSexo;
+    let resultadoPeso = document.getElementById("contenedor");
+    let resultados = document.createElement("div");
+    resultados.setAttribute("class", "resultados");
+    resultados.innerHTML = "<b>Peso Teorico: " + pesoCalc.toFixed() + "</b><br>Volumen corriente correspondiente al peso teorico: <br> Por 6ml/kg:" + ((pesoCalc.toFixed())*6) + "<br> Por 7ml/kg:" + ((pesoCalc.toFixed())*7) + "<br> Por 8ml/kg:" + ((pesoCalc.toFixed())*8);
+    resultadoPeso.appendChild(resultados);
+
+}
+
+
+
 
 
 
