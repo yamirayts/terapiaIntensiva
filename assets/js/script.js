@@ -14,12 +14,12 @@ function datoTobin(){
     let Input = `
     <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon1">Frecuencia Respiratoria</span>
-    <input id="frTobin" type="text" class="form-control" placeholder="Ej.: 25" aria-label="Username" aria-describedby="basic-addon1">
+    <input id="frTobin" type="number" class="form-control" placeholder="Ej.: 25" aria-label="Username" aria-describedby="basic-addon1">
     </div>
 
     <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon1">Volumen corriente (en litros) : </span>
-    <input id="vtTobin" type="text" class="form-control" placeholder="Ej.: 0.450" aria-label="Username" aria-describedby="basic-addon1">
+    <input id="vtTobin" type="number" class="form-control" placeholder="Ej.: 0.450" aria-label="Username" aria-describedby="basic-addon1">
     </div>
 
     <div class="d-grid gap-2 col-6 mx-auto">
@@ -66,17 +66,17 @@ function datoRox(){
     let Input = `
     <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon1">Saturacion:</span>
-    <input id="satRox" type="text" class="form-control" placeholder="Ej.: 95" aria-label="Username" aria-describedby="basic-addon1">
+    <input id="satRox" type="number" class="form-control" placeholder="Ej.: 95" aria-label="Username" aria-describedby="basic-addon1">
     </div>
 
     <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon1">FiO2: </span>
-    <input id="fioRox" type="text" class="form-control" placeholder="Ej.: 0.6" aria-label="Username" aria-describedby="basic-addon1">
+    <input id="fioRox" type="number" class="form-control" placeholder="Ej.: 0.6" aria-label="Username" aria-describedby="basic-addon1">
     </div>
 
     <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon1">Frecuencia Respiratoria :  </span>
-    <input id="frRox" type="text" class="form-control" placeholder="Ej.: 25" aria-label="Username" aria-describedby="basic-addon1">
+    <input id="frRox" type="number" class="form-control" placeholder="Ej.: 25" aria-label="Username" aria-describedby="basic-addon1">
     </div>
 
     <div class="d-grid gap-2 col-6 mx-auto">
@@ -102,7 +102,7 @@ function calculoRox() {
     let resultadoRox = document.getElementById("contenedor");
     let resultados = document.createElement("div");
     resultados.setAttribute("class", "resultados");
-    resultados.innerHTML = "Rox: " + roxCalc.toFixed() + "<br>Valores de referencia: <br>Predictores de falla: <br>< 3 a los 60min de inicio de OAF <br><3.5 a las 6hs <br><4a las 12hs <br>Cuando se mide 12 hs despues del inicio de OAF, un IROX >4.88 es un determinante de exito";
+    resultados.innerHTML = "<b>Rox: " + roxCalc.toFixed() + "</b><br>Valores de referencia: <br>Predictores de falla: <br>< 3 a los 60min de inicio de OAF <br><3.5 a las 6hs <br><4a las 12hs <br>Cuando se mide 12 hs despues del inicio de OAF, un IROX >4.88 es un determinante de exito";
     resultadoRox.appendChild(resultados);
 
 }
@@ -124,12 +124,12 @@ function datoDelta(){
     let Input = `
     <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon1">Plateau:</span>
-    <input id="platDelta" type="text" class="form-control" placeholder="Ej.: 22" aria-label="Username" aria-describedby="basic-addon1">
+    <input id="platDelta" type="number" class="form-control" placeholder="Ej.: 22" aria-label="Username" aria-describedby="basic-addon1">
     </div>
 
     <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon1">PEEP Total: </span>
-    <input id="peepDelta" type="text" class="form-control" placeholder="Ej.: 10" aria-label="Username" aria-describedby="basic-addon1">
+    <input id="peepDelta" type="number" class="form-control" placeholder="Ej.: 10" aria-label="Username" aria-describedby="basic-addon1">
     </div>
 
     <div class="d-grid gap-2 col-6 mx-auto">
@@ -153,7 +153,7 @@ function calculoDelta() {
     let resultadoDelta = document.getElementById("contenedor");
     let resultados = document.createElement("div");
     resultados.setAttribute("class", "resultados");
-    resultados.innerHTML = "Delta P : " + deltaCalc + "<br>El valor debe ser <15 para prevenir el daño asociado a la ventilación";
+    resultados.innerHTML = "<b>Delta P : " + deltaCalc + "</b><br>El valor debe ser <15 para prevenir el daño asociado a la ventilación";
     resultadoDelta.appendChild(resultados);
 
 }
@@ -176,12 +176,12 @@ function datoPafi(){
     let Input = `
     <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon1">pO2:</span>
-    <input id="poPafi" type="text" class="form-control" placeholder="Ej.: 85.5" aria-label="Username" aria-describedby="basic-addon1">
+    <input id="poPafi" type="number" class="form-control" placeholder="Ej.: 85.5" aria-label="Username" aria-describedby="basic-addon1">
     </div>
 
     <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon1">FiO2: </span>
-    <input id="fioPafi" type="text" class="form-control" placeholder="Ej.: 0.6" aria-label="Username" aria-describedby="basic-addon1">
+    <input id="fioPafi" type="number" class="form-control" placeholder="Ej.: 0.6" aria-label="Username" aria-describedby="basic-addon1">
     </div>
 
     <div class="d-grid gap-2 col-6 mx-auto">
@@ -207,7 +207,7 @@ function calculoPafi() {
     let resultadoPafi = document.getElementById("contenedor");
     let resultados = document.createElement("div");
     resultados.setAttribute("class", "resultados");
-    resultados.innerHTML = "PAFI: " + deltaCalc + "<br>Valores de referencia: <br>200 - 300: Leve <br>100 - 200: Moderado <br><100: Severo";
+    resultados.innerHTML = "<b>PAFI: " + deltaCalc + "</b><br>Valores de referencia: <br>200 - 300: Leve <br>100 - 200: Moderado <br><100: Severo";
     resultadoPafi.appendChild(resultados);
 
 }
@@ -230,12 +230,12 @@ function datoSafi(){
     let Input = `
     <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon1">Saturacion:</span>
-    <input id="satSafi" type="text" class="form-control" placeholder="Ej.: 95" aria-label="Username" aria-describedby="basic-addon1">
+    <input id="satSafi" type="number" class="form-control" placeholder="Ej.: 95" aria-label="Username" aria-describedby="basic-addon1">
     </div>
 
     <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon1">FiO2: </span>
-    <input id="fioSafi" type="text" class="form-control" placeholder="Ej.: 0.6" aria-label="Username" aria-describedby="basic-addon1">
+    <input id="fioSafi" type="number" class="form-control" placeholder="Ej.: 0.6" aria-label="Username" aria-describedby="basic-addon1">
     </div>
 
     <div class="d-grid gap-2 col-6 mx-auto">
@@ -260,7 +260,7 @@ function calculoSafi() {
     let resultadoSafi = document.getElementById("contenedor");
     let resultados = document.createElement("div");
     resultados.setAttribute("class", "resultados");
-    resultados.innerHTML = "SAFI: " + safiCalc.toFixed() + "<br>Valores de referencia: <br>310 - 460: Leve <br>160 - 310: Moderado <br><160: Severo";
+    resultados.innerHTML = "<b>SAFI: " + safiCalc.toFixed() + "</b><br>Valores de referencia: <br>310 - 460: Leve <br>160 - 310: Moderado <br><160: Severo";
     resultadoSafi.appendChild(resultados);
 
 }
