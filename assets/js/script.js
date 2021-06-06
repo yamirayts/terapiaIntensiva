@@ -328,7 +328,7 @@ function calculoPeso() {
     let resultadoPeso = document.getElementById("contenedor");
     let resultados = document.createElement("div");
     resultados.setAttribute("class", "resultados");
-    resultados.innerHTML = "<b>Peso Teorico: " + pesoCalc.toFixed() + "</b><br>Volumen corriente correspondiente al peso teorico: <br> Por 6ml/kg:" + ((pesoCalc.toFixed())*6) + "<br> Por 7ml/kg:" + ((pesoCalc.toFixed())*7) + "<br> Por 8ml/kg:" + ((pesoCalc.toFixed())*8);
+    resultados.innerHTML = "<b>Peso Teorico: " + pesoCalc.toFixed() +" Kg" + "</b><br>Volumen corriente correspondiente al peso teorico: <br> Por 6ml/kg:" + ((pesoCalc.toFixed())*6) + "<br> Por 7ml/kg:" + ((pesoCalc.toFixed())*7) + "<br> Por 8ml/kg:" + ((pesoCalc.toFixed())*8);
     resultadoPeso.appendChild(resultados);
 
 }
