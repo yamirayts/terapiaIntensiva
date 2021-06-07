@@ -102,7 +102,7 @@ function calculoRox() {
     let resultadoRox = document.getElementById("contenedor");
     let resultados = document.createElement("div");
     resultados.setAttribute("class", "resultados");
-    resultados.innerHTML = "<b>Rox: " + roxCalc.toFixed() + "</b><br>Valores de referencia: <br>Predictores de falla: <br>< 3 a los 60min de inicio de OAF <br><3.5 a las 6hs <br><4a las 12hs <br>Cuando se mide 12 hs despues del inicio de OAF, un IROX >4.88 es un determinante de exito";
+    resultados.innerHTML = "<b>Rox: " + roxCalc.toFixed(2) + "</b><br>Valores de referencia: <br>Predictores de falla: <br>< 3 a los 60min de inicio de OAF <br><3.5 a las 6hs <br><4a las 12hs <br>Cuando se mide 12 hs despues del inicio de OAF, un IROX >4.88 es un determinante de exito";
     resultadoRox.appendChild(resultados);
 
 }
