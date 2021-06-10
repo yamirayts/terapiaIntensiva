@@ -203,7 +203,7 @@ function datoPafi(){
 function calculoPafi() {
     let poPafi = document.getElementById("poPafi").value;
     let fioPafi = document.getElementById("fioPafi").value;
-    let deltaCalc = poPafi - fioPafi;
+    let deltaCalc = poPafi / fioPafi;
     let resultadoPafi = document.getElementById("contenedor");
     let resultados = document.createElement("div");
     resultados.setAttribute("class", "resultados");
