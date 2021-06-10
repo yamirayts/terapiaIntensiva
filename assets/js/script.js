@@ -203,11 +203,11 @@ function datoPafi(){
 function calculoPafi() {
     let poPafi = document.getElementById("poPafi").value;
     let fioPafi = document.getElementById("fioPafi").value;
-    let deltaCalc = poPafi / fioPafi;
+    let pafiCalc = poPafi / fioPafi;
     let resultadoPafi = document.getElementById("contenedor");
     let resultados = document.createElement("div");
     resultados.setAttribute("class", "resultados");
-    resultados.innerHTML = "<b>PAFI: " + deltaCalc + "</b><br>Valores de referencia: <br>200 - 300: Leve <br>100 - 200: Moderado <br><100: Severo";
+    resultados.innerHTML = "<b>PAFI: " + pafiCalc + "</b><br>Valores de referencia: <br>200 - 300: Leve <br>100 - 200: Moderado <br><100: Severo";
     resultadoPafi.appendChild(resultados);
 
 }
